@@ -1,0 +1,118 @@
+{
+  "doctype": "DocType",
+  "name": "Academic Program",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 0,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "رمز البرنامج",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "program_name",
+      "label": "اسم البرنامج",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "degree",
+      "label": "الدرجة",
+      "options": "ماجستير\nدكتوراه",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "college",
+      "label": "الكلية"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "department",
+      "label": "القسم"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "accreditation_year",
+      "label": "سنة الاعتماد"
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "status",
+      "label": "الحالة",
+      "options": "نشط\nمعلق\nملغى",
+      "default": "نشط"
+    },
+    {
+      "fieldtype": "Table",
+      "fieldname": "tracks",
+      "label": "المسارات",
+      "options": "Program Track"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "minimum_capacity_alert",
+      "label": "حد التنبيه الأدنى"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "maximum_capacity_alert",
+      "label": "حد التنبيه الأعلى"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    }
+  ],
+  "title_field": "program_name"
+}

@@ -1,0 +1,115 @@
+{
+  "doctype": "DocType",
+  "name": "Course",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 0,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "رمز المقرر",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "course_name",
+      "label": "اسم المقرر",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Float",
+      "fieldname": "credit_hours",
+      "label": "الساعات المعتمدة"
+    },
+    {
+      "fieldtype": "Small Text",
+      "fieldname": "objectives",
+      "label": "الأهداف"
+    },
+    {
+      "fieldtype": "Small Text",
+      "fieldname": "learning_outcomes",
+      "label": "مخرجات التعلم"
+    },
+    {
+      "fieldtype": "Long Text",
+      "fieldname": "content",
+      "label": "المحتوى"
+    },
+    {
+      "fieldtype": "Small Text",
+      "fieldname": "references",
+      "label": "المراجع"
+    },
+    {
+      "fieldtype": "Small Text",
+      "fieldname": "assessment_methods",
+      "label": "طرق التقويم"
+    },
+    {
+      "fieldtype": "Float",
+      "fieldname": "content_similarity_score",
+      "label": "درجة تشابه المحتوى",
+      "read_only": 1
+    },
+    {
+      "fieldtype": "Check",
+      "fieldname": "needs_review",
+      "label": "يحتاج مراجعة",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    }
+  ],
+  "title_field": "course_name"
+}

@@ -1,0 +1,90 @@
+{
+  "doctype": "DocType",
+  "name": "Committee",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 0,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "الرمز",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "committee_name",
+      "label": "اسم اللجنة",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "committee_type",
+      "label": "نوع اللجنة",
+      "options": "الدراسات العليا والمخططات\nالإرشاد الأكاديمي\nالاختبار الشامل\nالجودة\nالمطابقة وتشكيل اللجان\nالشكاوى والتظلمات\nالخدمة المجتمعية\nالتدريب\nالطلبة والأنشطة\nالخطط والبرامج"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "chairperson",
+      "label": "رئيس اللجنة"
+    },
+    {
+      "fieldtype": "Check",
+      "fieldname": "is_active",
+      "label": "نشطة",
+      "default": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    }
+  ],
+  "title_field": "committee_name"
+}

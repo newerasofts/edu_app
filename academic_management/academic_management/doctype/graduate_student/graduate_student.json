@@ -1,0 +1,135 @@
+{
+  "doctype": "DocType",
+  "name": "Graduate Student",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 0,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "student_id",
+      "label": "الرقم الجامعي",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "full_name",
+      "label": "اسم الطالب",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "gender",
+      "label": "الجنس",
+      "options": "ذكر\nأنثى"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "nationality",
+      "label": "الجنسية"
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "program",
+      "label": "البرنامج",
+      "options": "Academic Program",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "track",
+      "label": "المسار",
+      "options": "Program Track"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "admission_year",
+      "label": "سنة القبول"
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "current_status",
+      "label": "الحالة الأكاديمية",
+      "options": "منتظم\nتأجيل\nحذف\nانسحاب\nتحويل داخلي\nتحويل خارجي\nإيقاف\nفصل\nإعادة قيد",
+      "default": "منتظم"
+    },
+    {
+      "fieldtype": "Float",
+      "fieldname": "completion_percentage",
+      "label": "نسبة الإنجاز"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "expected_graduation_term",
+      "label": "الفصل المتوقع للتخرج"
+    },
+    {
+      "fieldtype": "Date",
+      "fieldname": "graduation_date",
+      "label": "تاريخ التخرج"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "thesis_title",
+      "label": "عنوان الرسالة"
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "advisor",
+      "label": "المشرف الأكاديمي",
+      "options": "Faculty Member"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    }
+  ],
+  "title_field": "full_name"
+}

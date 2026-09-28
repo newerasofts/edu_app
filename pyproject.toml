@@ -1,0 +1,8 @@
+[project]
+name = "academic_management"
+version = "0.1.0"
+description = "Graduate studies academic management for Frappe"
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 120

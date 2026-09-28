@@ -1,0 +1,27 @@
+{
+  "doctype": "DocType",
+  "name": "Meeting Attendee",
+  "module": "Academic Management",
+  "custom": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "fields": [
+    {
+      "fieldtype": "Link",
+      "fieldname": "user",
+      "label": "المستخدم",
+      "options": "User"
+    },
+    {
+      "fieldtype": "Check",
+      "fieldname": "attended",
+      "label": "حضر",
+      "default": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "role_in_meeting",
+      "label": "الدور"
+    }
+  ]
+}

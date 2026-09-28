@@ -1,0 +1,110 @@
+{
+  "doctype": "DocType",
+  "name": "Committee Meeting",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 1,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "الرمز",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "committee",
+      "label": "اللجنة",
+      "options": "Committee",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Date",
+      "fieldname": "meeting_date",
+      "label": "تاريخ الاجتماع",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "location",
+      "label": "المكان"
+    },
+    {
+      "fieldtype": "Small Text",
+      "fieldname": "agenda",
+      "label": "جدول الأعمال"
+    },
+    {
+      "fieldtype": "Long Text",
+      "fieldname": "minutes",
+      "label": "المحضر"
+    },
+    {
+      "fieldtype": "Table",
+      "fieldname": "attendees",
+      "label": "الحضور",
+      "options": "Meeting Attendee"
+    },
+    {
+      "fieldtype": "Table",
+      "fieldname": "action_items",
+      "label": "بنود التنفيذ",
+      "options": "Committee Action Item"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Graduate Student",
+      "read": 1
+    }
+  ]
+}

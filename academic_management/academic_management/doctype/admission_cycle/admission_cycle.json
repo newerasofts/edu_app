@@ -1,0 +1,118 @@
+{
+  "doctype": "DocType",
+  "name": "Admission Cycle",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 0,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "الرمز",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "program",
+      "label": "البرنامج",
+      "options": "Academic Program",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "track",
+      "label": "المسار",
+      "options": "Program Track"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "academic_year",
+      "label": "العام الأكاديمي",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "term",
+      "label": "الفصل",
+      "options": "الأول\nالثاني\nالصيفي"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "applicants",
+      "label": "المتقدمون"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "accepted",
+      "label": "المقبولون"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "enrolled",
+      "label": "المسجلون"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "capacity",
+      "label": "الطاقة الاستيعابية"
+    },
+    {
+      "fieldtype": "Percent",
+      "fieldname": "acceptance_rate",
+      "label": "نسبة القبول",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    }
+  ],
+  "title_field": "code"
+}

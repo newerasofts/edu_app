@@ -1,0 +1,116 @@
+{
+  "doctype": "DocType",
+  "name": "Teaching Load",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 0,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "الرمز",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "faculty_member",
+      "label": "عضو هيئة التدريس",
+      "options": "Faculty Member",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "academic_year",
+      "label": "العام الأكاديمي",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "term",
+      "label": "الفصل",
+      "options": "الأول\nالثاني\nالصيفي"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "teaching_hours",
+      "label": "الساعات الفعلية"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "sections_count",
+      "label": "عدد الشعب"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "student_count",
+      "label": "عدد الطلبة"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "standard_load",
+      "label": "العبء المعياري"
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "load_status",
+      "label": "حالة العبء",
+      "options": "منخفض\nضمن المعيار\nمتجاوز",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Graduate Student",
+      "read": 1
+    }
+  ]
+}

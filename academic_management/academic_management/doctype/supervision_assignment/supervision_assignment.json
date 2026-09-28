@@ -1,0 +1,107 @@
+{
+  "doctype": "DocType",
+  "name": "Supervision Assignment",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 0,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "الرمز",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "faculty_member",
+      "label": "المشرف",
+      "options": "Faculty Member",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "student",
+      "label": "الطالب",
+      "options": "Graduate Student",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "degree",
+      "label": "الدرجة",
+      "options": "ماجستير\nدكتوراه"
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "status",
+      "label": "الحالة",
+      "options": "قيد التنفيذ\nمنتهي\nمعلق",
+      "default": "قيد التنفيذ"
+    },
+    {
+      "fieldtype": "Date",
+      "fieldname": "start_date",
+      "label": "تاريخ البدء"
+    },
+    {
+      "fieldtype": "Date",
+      "fieldname": "end_date",
+      "label": "تاريخ الانتهاء"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Graduate Student",
+      "read": 1
+    }
+  ]
+}

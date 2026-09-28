@@ -1,0 +1,119 @@
+{
+  "doctype": "DocType",
+  "name": "Course Offering",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 0,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "الرمز",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "course",
+      "label": "المقرر",
+      "options": "Course",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "academic_year",
+      "label": "العام الأكاديمي",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "term",
+      "label": "الفصل",
+      "options": "الأول\nالثاني\nالصيفي",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "section",
+      "label": "الشعبة"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "room",
+      "label": "القاعة"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "schedule",
+      "label": "الوقت"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "capacity",
+      "label": "السعة"
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "enrolled_count",
+      "label": "المسجلون",
+      "read_only": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "instructor",
+      "label": "عضو هيئة التدريس",
+      "options": "Faculty Member"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0
+    }
+  ],
+  "title_field": "code"
+}

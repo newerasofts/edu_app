@@ -1,0 +1,39 @@
+{
+  "doctype": "DocType",
+  "name": "Study Plan Course",
+  "module": "Academic Management",
+  "custom": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "fields": [
+    {
+      "fieldtype": "Link",
+      "fieldname": "course",
+      "label": "المقرر",
+      "options": "Course",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "semester_number",
+      "label": "الفصل",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Float",
+      "fieldname": "credit_hours",
+      "label": "الساعات"
+    },
+    {
+      "fieldtype": "Data",
+      "fieldname": "prerequisite",
+      "label": "المتطلب السابق"
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "requirement_type",
+      "label": "نوع المتطلب",
+      "options": "إجباري\nاختياري"
+    }
+  ]
+}

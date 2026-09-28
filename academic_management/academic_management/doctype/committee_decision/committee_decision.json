@@ -1,0 +1,112 @@
+{
+  "doctype": "DocType",
+  "name": "Committee Decision",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 1,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "الرمز",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "committee",
+      "label": "اللجنة",
+      "options": "Committee",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "meeting",
+      "label": "الاجتماع",
+      "options": "Committee Meeting"
+    },
+    {
+      "fieldtype": "Small Text",
+      "fieldname": "decision_text",
+      "label": "نص القرار",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "responsible_user",
+      "label": "المسؤول عن التنفيذ",
+      "options": "User"
+    },
+    {
+      "fieldtype": "Date",
+      "fieldname": "due_date",
+      "label": "تاريخ الاستحقاق"
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "status",
+      "label": "الحالة",
+      "options": "مقترح\nمعتمد\nقيد التنفيذ\nمنجز\nمتأخر",
+      "default": "مقترح"
+    },
+    {
+      "fieldtype": "Small Text",
+      "fieldname": "follow_up_notes",
+      "label": "ملاحظات المتابعة"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Graduate Student",
+      "read": 1
+    }
+  ]
+}

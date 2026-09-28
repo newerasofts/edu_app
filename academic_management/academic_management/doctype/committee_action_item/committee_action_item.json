@@ -1,0 +1,34 @@
+{
+  "doctype": "DocType",
+  "name": "Committee Action Item",
+  "module": "Academic Management",
+  "custom": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "action_title",
+      "label": "المهمة",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "assigned_to",
+      "label": "مسند إلى",
+      "options": "User"
+    },
+    {
+      "fieldtype": "Date",
+      "fieldname": "due_date",
+      "label": "تاريخ الاستحقاق"
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "status",
+      "label": "الحالة",
+      "options": "مفتوحة\nقيد التنفيذ\nمنجزة\nمتأخرة",
+      "default": "مفتوحة"
+    }
+  ]
+}

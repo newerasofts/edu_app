@@ -1,0 +1,108 @@
+{
+  "doctype": "DocType",
+  "name": "Academic Status Log",
+  "module": "Academic Management",
+  "custom": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "allow_rename": 1,
+  "is_submittable": 1,
+  "autoname": "field:code",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "code",
+      "label": "الرمز",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldtype": "Link",
+      "fieldname": "student",
+      "label": "الطالب",
+      "options": "Graduate Student",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "from_status",
+      "label": "من حالة",
+      "options": "منتظم\nتأجيل\nحذف\nانسحاب\nتحويل داخلي\nتحويل خارجي\nإيقاف\nفصل\nإعادة قيد"
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "to_status",
+      "label": "إلى حالة",
+      "options": "منتظم\nتأجيل\nحذف\nانسحاب\nتحويل داخلي\nتحويل خارجي\nإيقاف\nفصل\nإعادة قيد",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Date",
+      "fieldname": "effective_date",
+      "label": "تاريخ النفاذ",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Small Text",
+      "fieldname": "reason",
+      "label": "السبب"
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "approval_status",
+      "label": "حالة الاعتماد",
+      "options": "مسودة\nقيد المراجعة\nمعتمد\nمرفوض",
+      "default": "مسودة"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Academic Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Dean",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Department Head",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Committee Member",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Academic Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Graduate Student",
+      "read": 1
+    }
+  ]
+}

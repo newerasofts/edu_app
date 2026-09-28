@@ -1,0 +1,34 @@
+{
+  "doctype": "DocType",
+  "name": "Program Track",
+  "module": "Academic Management",
+  "custom": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "fields": [
+    {
+      "fieldtype": "Data",
+      "fieldname": "track_name",
+      "label": "اسم المسار",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Select",
+      "fieldname": "track_type",
+      "label": "نوع المسار",
+      "options": "رسالة\nمقررات\nمهني",
+      "reqd": 1
+    },
+    {
+      "fieldtype": "Int",
+      "fieldname": "capacity",
+      "label": "الطاقة الاستيعابية"
+    },
+    {
+      "fieldtype": "Check",
+      "fieldname": "is_active",
+      "label": "نشط",
+      "default": 1
+    }
+  ]
+}
